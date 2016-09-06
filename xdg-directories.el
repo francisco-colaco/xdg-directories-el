@@ -168,18 +168,18 @@
   :type 'directory)
 
 
-(defun xdg-get-user-file (filename parent-directory &optional create-parent-dirs)
-  "Locate FILENAME under PARENT-DIRECTORY/emacs, wherther it exists or not.
+(defun xdg-get-user-file (filename directory &optional create-parent-dirs)
+  "Locate FILENAME under DIRECTORY, wherther it exists or not.
 
-If CREATE-PARENT-DIRS is T, the parent directories are created."
-  (let* ((base-dir (expand-file-name "emacs" parent-directory))
-         (file (expand-file-name filename base-dir))
-         (dir (file-name-directory file)))
+If CREATE-PARENT-DIRS is T, the parent directories are created.
+
+Returns the complete file path, so it can be chained."
+  (let ((file (expand-file-name filename directory)))
     ;; Create any parent directories, if so requested.
     (if create-parent-dirs
-        (unless (file-exists-p dir)
-          (make-directory dir t)))
-    ;; Return the file name.
+      (unless (file-exists-p directory)
+        (make-directory directory t)))
+    ;; Return the name of the file with the given path.
     file))
 
 

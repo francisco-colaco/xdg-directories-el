@@ -47,31 +47,31 @@ regardless of the file existence.
 
 ```` emacs-lisp
 (locate-user-emacs-config-file "init.el")
-"/home/francisco.colaco/.config/emacs/emacs/init.el"
+"/home/francisco.colaco/.config/emacs/init.el"
 ````
 
 - Data files:
 
 ```` emacs-lisp
 (locate-user-emacs-data-file "recentf")
-"/home/francisco.colaco/.local/share/emacs/emacs/recentf"
+"/home/francisco.colaco/.local/share/emacs/recentf"
 ````
 
 - Cache files:
 
 ```` emacs-lisp
 (locate-user-emacs-cache-file "elfeed/index")
-"/home/francisco.colaco/.cache/emacs/emacs/elfeed/index"
+"/home/francisco.colaco/.cache/emacs/elfeed/index"
 ````
 
 - Runtime files:
 
 ```` emacs-lisp
 (locate-user-emacs-runtime-file "credentials.txt")
-"/run/user/1000/emacs/emacs/credentials.txt"
+"/run/user/1000/emacs/credentials.txt"
 ````
 
-* Examples
+* Useful examples
 
 Put `custom.el` in a config domain (normally `~/.config/emacs/custom.el`):
 
