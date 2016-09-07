@@ -28,9 +28,6 @@
 
 ;;; Code:
 
-(require 's)
-
-
 (defgroup xdg-directories
     ()
   "XDG Base Directory Specification"
@@ -40,7 +37,7 @@
 
 (defun xdg-get-path (domain &optional name)
   "Return the directory at DOMAIN, with an optional NAME relative to it."
-  (let ((dir (s-chomp (shell-command-to-string (concat "xdg-user-dir " domain)))))
+  (let ((dir (substring (shell-command-to-string (concat "xdg-user-dir " "PICTURES")) 0 -1)))
     (if name
         (expand-file-name name dir)
         dir)))
