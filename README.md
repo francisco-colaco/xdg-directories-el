@@ -1,3 +1,9 @@
+# DEPRECATION NOTICE
+
+**The code in this repository is deprecated.**  [emacs-directories](https://github.com/francisco-colaco/emacs-directories.git) should be used instead.
+
+
+
 xdg-directories.el: locate files in Emacs under the XDG Base Directory
 Specification.
 
